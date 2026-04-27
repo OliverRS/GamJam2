@@ -9,6 +9,9 @@ public class Question
     public string[] replies;
     public int correctReplyIndex;
     public Sprite questionImage;
+    public AudioClip correctSound;
+    public AudioClip wrongSound;
+
 }
 
 [CreateAssetMenu(fileName = "New Category", menuName = "Quiz/Question Data")]

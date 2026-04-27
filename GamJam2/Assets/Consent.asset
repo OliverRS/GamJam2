@@ -20,39 +20,53 @@ MonoBehaviour:
     - 
     correctReplyIndex: 1
     questionImage: {fileID: 3944595125350778941, guid: 72a33c9cbcfac48d1a2357e850d7a862, type: 3}
+    correctSound: {fileID: 8300000, guid: 049786445955c4e41b0259424ed15a31, type: 3}
+    wrongSound: {fileID: 8300000, guid: 615f20e0832dd43ff93e798675c2adb5, type: 3}
   - questionText: Q2
     replies:
     - 
     - 
     correctReplyIndex: 2
     questionImage: {fileID: -2357465702321291794, guid: c3f56a7df4b324a66960874bdd8d6967, type: 3}
+    correctSound: {fileID: 8300000, guid: 049786445955c4e41b0259424ed15a31, type: 3}
+    wrongSound: {fileID: 8300000, guid: 615f20e0832dd43ff93e798675c2adb5, type: 3}
   - questionText: Q3
     replies:
     - 
     - 
     correctReplyIndex: 2
     questionImage: {fileID: -49759111374066190, guid: 1d3ef3f141d7b4f0fbd2fb9d99f3fa4b, type: 3}
+    correctSound: {fileID: 8300000, guid: 049786445955c4e41b0259424ed15a31, type: 3}
+    wrongSound: {fileID: 8300000, guid: 615f20e0832dd43ff93e798675c2adb5, type: 3}
   - questionText: Q4
     replies:
     - 
     - 
     correctReplyIndex: 1
     questionImage: {fileID: -8593673994287358066, guid: ad3cb58658e4d47c9b1f21285cfb6b71, type: 3}
+    correctSound: {fileID: 8300000, guid: 049786445955c4e41b0259424ed15a31, type: 3}
+    wrongSound: {fileID: 8300000, guid: 615f20e0832dd43ff93e798675c2adb5, type: 3}
   - questionText: Q5
     replies:
     - 
     - 
     correctReplyIndex: 2
     questionImage: {fileID: 5552905624919405381, guid: a9fc49f1b3c7944408c6fc5cf28ac652, type: 3}
+    correctSound: {fileID: 8300000, guid: 049786445955c4e41b0259424ed15a31, type: 3}
+    wrongSound: {fileID: 8300000, guid: 615f20e0832dd43ff93e798675c2adb5, type: 3}
   - questionText: Q6
     replies:
     - 
     - 
     correctReplyIndex: 1
     questionImage: {fileID: -1749536107311098008, guid: 476ccc8e9b3c14dd8941ea2076abc1be, type: 3}
+    correctSound: {fileID: 8300000, guid: 049786445955c4e41b0259424ed15a31, type: 3}
+    wrongSound: {fileID: 8300000, guid: 615f20e0832dd43ff93e798675c2adb5, type: 3}
   - questionText: Q7
     replies:
     - 
     - 
     correctReplyIndex: 1
     questionImage: {fileID: -1212899509047545403, guid: e54f6944082e8483a83c109945f70581, type: 3}
+    correctSound: {fileID: 8300000, guid: 049786445955c4e41b0259424ed15a31, type: 3}
+    wrongSound: {fileID: 8300000, guid: 615f20e0832dd43ff93e798675c2adb5, type: 3}
