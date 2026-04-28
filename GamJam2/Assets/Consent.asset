@@ -62,11 +62,11 @@ MonoBehaviour:
     questionImage: {fileID: -1749536107311098008, guid: 476ccc8e9b3c14dd8941ea2076abc1be, type: 3}
     correctSound: {fileID: 8300000, guid: 049786445955c4e41b0259424ed15a31, type: 3}
     wrongSound: {fileID: 8300000, guid: 615f20e0832dd43ff93e798675c2adb5, type: 3}
-  - questionText: Q7
+  - questionText: END
     replies:
     - 
     - 
     correctReplyIndex: 1
-    questionImage: {fileID: -1212899509047545403, guid: e54f6944082e8483a83c109945f70581, type: 3}
+    questionImage: {fileID: -6991255072425966633, guid: 48fa47dc6c11a47d08fe88dc7b2920a5, type: 3}
     correctSound: {fileID: 8300000, guid: 049786445955c4e41b0259424ed15a31, type: 3}
     wrongSound: {fileID: 8300000, guid: 615f20e0832dd43ff93e798675c2adb5, type: 3}

@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -60,16 +61,13 @@ public class GameManager : MonoBehaviour
         if (replyIndex == question.correctReplyIndex)
         {
             Debug.Log("Correct reply!");
-
-            if (question.correctSound != null)
-                audioSource.PlayOneShot(question.correctSound);
+            audioSource.PlayOneShot(question.correctSound);
         }
         else
         {
             Debug.Log("Wrong Reply!");
-
-            if (question.wrongSound != null)
-                audioSource.PlayOneShot(question.wrongSound);
+            audioSource.PlayOneShot(question.wrongSound);
+            SceneManager.LoadScene("Fired");
         }
 
         currentQuestionIndex++;
@@ -80,6 +78,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            SceneManager.LoadScene("Ending");
             Debug.Log("Quiz Finished");
         }
     }
