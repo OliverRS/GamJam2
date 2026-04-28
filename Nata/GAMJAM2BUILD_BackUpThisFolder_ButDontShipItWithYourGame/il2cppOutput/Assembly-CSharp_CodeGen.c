@@ -1,0 +1,90 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void AudioManager_PlayClick_m15201BA935BE3D0BF9FA8999FD75F5F508945C2E (void);
+extern void AudioManager_PlayWrong_m9E30D4148E780AC49483714131D9817717B1645D (void);
+extern void AudioManager__ctor_mA793A9DF6B975D03690B7C953972EFE41AE4D5E6 (void);
+extern void GameManager_PlayButtonClick_m2AFCB418FDF7C4E40DDDD6F2D4D7C8E818C591C5 (void);
+extern void GameManager_PlayAnotherButtonSound_m49525849473D16EDD9AC192B38A6062DFE15E68D (void);
+extern void GameManager_Start_m87A71D65F3171A58DBDDBFB03832ADA65643D0E2 (void);
+extern void GameManager_SelectCategory_m0100D7BD2786CEB81210B2DC0BD484C02DCCDD71 (void);
+extern void GameManager_DisplayQuestion_m5E46D5FC93F4055581C7318B5BF17B5F492F0813 (void);
+extern void GameManager_OnReplySelected_mA3D65BE5FDA193A156FFC3796F03BD44782C3B92 (void);
+extern void GameManager__ctor_mF453CED520617BFB65C52405A964E06CF17DB368 (void);
+extern void PauseManager_TogglePause_m45406A7AF30AA44B6E9CFC3DED8080A420B560F7 (void);
+extern void PauseManager__ctor_m788EE397EDE791BFFD154E39196C6846960C5929 (void);
+extern void Question__ctor_m4FCD76E9172F82F52A2E12CC6FF4DDF425BB4A05 (void);
+extern void QuestionData__ctor_m1CA7021B2F690C43270ABD4C12590B94FA9B256E (void);
+extern void Transition_transition_m8CEE513509C345194DF15F8B6D4ED3BEAD3BDE0E (void);
+extern void Transition__ctor_m641CBEB2CAC3DD257BAC609DE294488F9BF64768 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
+static Il2CppMethodPointer s_methodPointers[18] = 
+{
+	AudioManager_PlayClick_m15201BA935BE3D0BF9FA8999FD75F5F508945C2E,
+	AudioManager_PlayWrong_m9E30D4148E780AC49483714131D9817717B1645D,
+	AudioManager__ctor_mA793A9DF6B975D03690B7C953972EFE41AE4D5E6,
+	GameManager_PlayButtonClick_m2AFCB418FDF7C4E40DDDD6F2D4D7C8E818C591C5,
+	GameManager_PlayAnotherButtonSound_m49525849473D16EDD9AC192B38A6062DFE15E68D,
+	GameManager_Start_m87A71D65F3171A58DBDDBFB03832ADA65643D0E2,
+	GameManager_SelectCategory_m0100D7BD2786CEB81210B2DC0BD484C02DCCDD71,
+	GameManager_DisplayQuestion_m5E46D5FC93F4055581C7318B5BF17B5F492F0813,
+	GameManager_OnReplySelected_mA3D65BE5FDA193A156FFC3796F03BD44782C3B92,
+	GameManager__ctor_mF453CED520617BFB65C52405A964E06CF17DB368,
+	PauseManager_TogglePause_m45406A7AF30AA44B6E9CFC3DED8080A420B560F7,
+	PauseManager__ctor_m788EE397EDE791BFFD154E39196C6846960C5929,
+	Question__ctor_m4FCD76E9172F82F52A2E12CC6FF4DDF425BB4A05,
+	QuestionData__ctor_m1CA7021B2F690C43270ABD4C12590B94FA9B256E,
+	Transition_transition_m8CEE513509C345194DF15F8B6D4ED3BEAD3BDE0E,
+	Transition__ctor_m641CBEB2CAC3DD257BAC609DE294488F9BF64768,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+};
+static const int32_t s_InvokerIndices[18] = 
+{
+	17263,
+	17263,
+	17263,
+	17263,
+	17263,
+	17263,
+	12660,
+	17263,
+	12660,
+	17263,
+	17263,
+	17263,
+	17263,
+	17263,
+	17263,
+	17263,
+	30266,
+	17263,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	18,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
