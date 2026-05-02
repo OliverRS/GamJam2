@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 476ccc8e9b3c14dd8941ea2076abc1be
+guid: 1e98d16fbd524314d96641d3c7bd35fe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1749536107311098008
-    second: PaperGOOD3_0
+      213: 3648183249034891762
+    second: NewPaperBad3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -110,19 +110,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PaperGOOD3_0
+      name: NewPaperBad3_0
       rect:
         serializedVersion: 2
         x: 24
@@ -154,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 867900a0e2668b7e0800000000000000
-      internalID: -1749536107311098008
+      spriteID: 2f1514a0653f0a230800000000000000
+      internalID: 3648183249034891762
       vertices: []
       indices: 
       edges: []
@@ -174,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PaperGOOD3_0: -1749536107311098008
+      NewPaperBad3_0: 3648183249034891762
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
