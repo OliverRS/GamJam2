@@ -2,6 +2,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using JetBrains.Annotations;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,7 +33,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SelectCategory(0);
+        
     }
+    
 
     public void SelectCategory(int categoryIndex)
     {
@@ -53,7 +57,7 @@ public class GameManager : MonoBehaviour
             buttonText.text = question.replies[i];
         }
     }
-
+    
     public void OnReplySelected(int replyIndex)
     {
         var question = selectedCategory.questions[currentQuestionIndex];
@@ -62,6 +66,9 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Correct reply!");
             audioSource.PlayOneShot(question.correctSound);
+
+            StartCoroutine(NextPaperDelay(1f));
+            Debug.Log("corotine");
         }
         else
         {
@@ -69,17 +76,26 @@ public class GameManager : MonoBehaviour
             audioSource.PlayOneShot(question.wrongSound);
             SceneManager.LoadScene("Fired");
         }
-
-        currentQuestionIndex++;
-
-        if (currentQuestionIndex < selectedCategory.questions.Length)
-        {
-            DisplayQuestion();
         }
-        else
+
+        public IEnumerator NextPaperDelay(float delay)
         {
-            SceneManager.LoadScene("Ending");
-            Debug.Log("Quiz Finished");
+            yield return new WaitForSeconds(delay);
+            currentQuestionIndex++;
+    
+            if (currentQuestionIndex < selectedCategory.questions.Length)
+            {
+                DisplayQuestion();
+            }
+            else
+            {
+                SceneManager.LoadScene("Ending");
+                Debug.Log("Quiz Finished");
+            }
+        
         }
-    }
 }
+
+
+        
+
