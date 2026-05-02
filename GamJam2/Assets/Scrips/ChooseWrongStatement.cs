@@ -14,13 +14,13 @@ public class QuizManager : MonoBehaviour
         {
             Debug.Log("Correct!");
 
-            //Hide current question
+            //Set the current question inactive
             questions[currentQuestion].SetActive(false);
 
-            //Move to next
+            //Move to next question
             currentQuestion++;
 
-            //Check if finished
+            //Check if it is finished
             if (currentQuestion >= questions.Length)
             {
                 SceneManager.LoadScene("Ending");
