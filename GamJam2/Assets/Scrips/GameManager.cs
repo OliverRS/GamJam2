@@ -15,6 +15,18 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip buttonClickSound;
     public AudioClip anotherButtonSound;
+    
+
+
+
+    public float timePerQuestion = 15f;
+    private float currentTime;
+    public TMP_Text timerText;
+    private bool isTimerRunning = false;
+
+
+
+    
 
     public void PlayButtonClick()
     {
@@ -52,10 +64,15 @@ public class GameManager : MonoBehaviour
             TMP_Text buttonText = replyButtons[i].GetComponentInChildren<TMP_Text>();
             buttonText.text = question.replies[i];
         }
+
+        // Starter timeren
+        currentTime = timePerQuestion;
+        isTimerRunning = true;
     }
 
     public void OnReplySelected(int replyIndex)
     {
+        isTimerRunning = false;
         var question = selectedCategory.questions[currentQuestionIndex];
 
         if (replyIndex == question.correctReplyIndex)
@@ -81,5 +98,33 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Ending");
             Debug.Log("Quiz Finished");
         }
+    }
+    void Update()
+    {
+        if (!isTimerRunning) return;
+
+        currentTime -= Time.deltaTime;
+
+        timerText.text = Mathf.Ceil(currentTime).ToString();
+
+        if (currentTime <= 0)
+        {
+            TimeUp();
+        }
+        if (currentTime <= 5f)
+        {
+            timerText.color = Color.red;
+        }
+        else
+        {
+        timerText.color = Color.white;
+        }
+    }
+    void TimeUp()
+    {
+        isTimerRunning = false;
+
+        Debug.Log("Ikke mere tid tilbage");
+        SceneManager.LoadScene("Fired");
     }
 }
