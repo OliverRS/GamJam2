@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,8 +16,9 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip buttonClickSound;
     public AudioClip anotherButtonSound;
-    
 
+    public static event Action OnCorrectAnswer;
+    public static event Action OnWrongAnswer;
 
 
     public float timePerQuestion = 15f;
@@ -79,12 +81,14 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Correct reply!");
             audioSource.PlayOneShot(question.correctSound);
+            OnCorrectAnswer?.Invoke();
         }
         else
         {
             Debug.Log("Wrong Reply!");
             audioSource.PlayOneShot(question.wrongSound);
             SceneManager.LoadScene("Fired");
+            OnWrongAnswer?.Invoke();
         }
 
         currentQuestionIndex++;
