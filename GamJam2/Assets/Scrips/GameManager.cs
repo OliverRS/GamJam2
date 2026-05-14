@@ -2,9 +2,14 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    public UnityEvent onCorrectAnswer;
+    public UnityEvent onWrongAnswer;
+    public UnityEvent OnQuizFinished;
+
     public QuestionData[] categories;
     private QuestionData selectedCategory;
     private int currentQuestionIndex = 0;
@@ -30,6 +35,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        onCorrectAnswer.AddListener(HandleCorrectAnswer);
+        onWrongAnswer.AddListener(HandleWrongAnswer);
+        OnQuizFinished.AddListener(HandleQuizFinished);
+        
         SelectCategory(0);
     }
 
@@ -46,40 +55,49 @@ public class GameManager : MonoBehaviour
 
         var question = selectedCategory.questions[currentQuestionIndex];
         questionImage.sprite = question.questionImage;
-
-        for (int i = 0; i < replyButtons.Length; i++)
-        {
-            TMP_Text buttonText = replyButtons[i].GetComponentInChildren<TMP_Text>();
-            buttonText.text = question.replies[i];
-        }
     }
 
     public void OnReplySelected(int replyIndex)
     {
         var question = selectedCategory.questions[currentQuestionIndex];
+        bool isCorrect = replyIndex == question.correctReplyIndex;
 
-        if (replyIndex == question.correctReplyIndex)
-        {
-            Debug.Log("Correct reply!");
-            audioSource.PlayOneShot(question.correctSound);
-        }
+        if (isCorrect)
+            onCorrectAnswer.Invoke();
+
         else
-        {
-            Debug.Log("Wrong Reply!");
-            audioSource.PlayOneShot(question.wrongSound);
-            SceneManager.LoadScene("Fired");
-        }
+            onWrongAnswer.Invoke();
+
 
         currentQuestionIndex++;
 
         if (currentQuestionIndex < selectedCategory.questions.Length)
-        {
             DisplayQuestion();
-        }
+        
         else
-        {
-            SceneManager.LoadScene("Ending");
-            Debug.Log("Quiz Finished");
-        }
+            OnQuizFinished.Invoke();
+    }
+
+
+
+    private void HandleCorrectAnswer()
+    {
+        Debug.Log("Correct!");
+        var question = selectedCategory.questions[currentQuestionIndex];
+        audioSource.PlayOneShot(question.correctSound);
+    }
+
+    private void HandleWrongAnswer()
+    {
+        Debug.Log("Wrong!");
+        var question = selectedCategory.questions[currentQuestionIndex];
+        audioSource.PlayOneShot(question.wrongSound);
+        SceneManager.LoadScene("Fired");
+    }
+
+    private void HandleQuizFinished()
+    {
+        Debug.Log("Quiz Finished!");
+        SceneManager.LoadScene("Ending");
     }
 }
